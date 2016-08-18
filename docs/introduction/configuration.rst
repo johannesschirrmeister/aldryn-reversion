@@ -16,7 +16,7 @@ Model registration
 
 For the model, add ``@version_controlled_content`` as a decorator::
 
-    from aldryn-reversion.core import version_controlled_content
+    from aldryn_reversion.core import version_controlled_content
 
     @version_controlled_content
     class MyModel(models.Model):
@@ -97,9 +97,9 @@ Admin registration
 For the admin, replace ``PlaceholderAdminMixin`` with ``VersionedPlaceholderAdminMixin`` in the
 ``ModelAdmin`` class for any models that include Placeholders that need to be versioned::
 
-    from aldryn-reversion.admin import VersionedPlacholderAdminMixin
+    from aldryn_reversion.admin import VersionedPlaceholderAdminMixin
 
-    class MyModelAdmin(VersionedPlacholderAdminMixin, admin.ModelAdmin):
+    class MyModelAdmin(VersionedPlaceholderAdminMixin, admin.ModelAdmin):
         ...
 
 Revisions are accessible from the model's admin change form.
